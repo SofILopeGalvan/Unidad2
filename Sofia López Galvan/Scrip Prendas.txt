@@ -1,0 +1,32 @@
+
+CREATE TABLE public.prendas
+(
+  id_prenda integer NOT NULL DEFAULT nextval('prendas_id_prenda_seq'::regclass),
+  descripcion character varying(20),
+  color character varying(20),
+  stand character varying(20),
+  precio integer,
+  CONSTRAINT prendas_pkey PRIMARY KEY (id_prenda)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.prendas
+  OWNER TO postgres;
+
+
+
+CREATE TABLE public.estudiantes
+(
+  id_estudiante integer NOT NULL DEFAULT nextval('estudiantes_id_estudiante_seq'::regclass),
+  nombre character varying(20),
+  apellidos character varying(20),
+  curso character varying(20),
+  anio integer,
+  CONSTRAINT estudiantes_pkey PRIMARY KEY (id_estudiante)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.estudiantes
+  OWNER TO postgres;
